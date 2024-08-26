@@ -178,6 +178,11 @@ p {
     max-width: 50%;
 }
 
+.link-container {
+    display: block; 
+    text-decoration: none; 
+    color: inherit; 
+}
 
 .quote blockquote {
     background-color: var(--verdeclaro);
