@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jersey+10&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+ 
     
     <header class="header">
         <section class="contenedor">
@@ -21,10 +21,9 @@
                 </a>
 
             <nav class="naveg">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="species.html">Species</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="species.php">Species</a>
+                <a href="blog.php">Blog</a>
+                <a href="contact.html">Contact</a>
             </nav>
             </div> <!--Barra-->
 
@@ -35,7 +34,7 @@
     <main>
 
         <section class="title-article">
-            <a href="blog.html">
+            <a href="blog.php">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M9 14l-4 -4l4 -4" />
@@ -65,10 +64,9 @@
 
     <footer class="footer">
         <nav class="naveg">
-            <a href="nosotros.html">Nosotros</a>
-            <a href="species.html">Species</a>
-            <a href="blog.html">Blog</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="species.php">Species</a>
+            <a href="blog.php">Blog</a>
+            <a href="contact.html">Contact</a>
         </nav>
         </div>
     </footer>

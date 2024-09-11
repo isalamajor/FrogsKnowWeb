@@ -21,10 +21,9 @@
                 </a>
 
             <nav class="naveg">
-                <a href="nosotros.html">Nosotros</a>
                 <a href="species.html">Species</a>
                 <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="contact.html">Contact</a>
             </nav>
             </div> <!--Barra-->
 
@@ -35,7 +34,7 @@
     <main>
 
         <section class="title-specie">
-            <a href="species.html">
+            <a href="species.php">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M9 14l-4 -4l4 -4" />
@@ -61,6 +60,7 @@
                     <path d="M12.5 3a17 17 0 0 1 0 18" />
                 </svg>
                 <p><span>Location:</span> Europe</p>
+            </div>
 
             <div class="characteristic">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -97,10 +97,9 @@
 
     <footer class="footer">
         <nav class="naveg">
-            <a href="nosotros.html">Nosotros</a>
             <a href="species.html">Species</a>
             <a href="blog.html">Blog</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </footer>
 

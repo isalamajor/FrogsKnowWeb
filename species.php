@@ -19,10 +19,9 @@
                 </a>
 
             <nav class="naveg">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="species.html">Species</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
+                <a href="species.php">Species</a>
+                <a href="blog.php">Blog</a>
+                <a href="contact.html">Contact</a>
             </nav>
             </div> <!--Barra-->
 
@@ -30,10 +29,15 @@
         </div>
     </header>
 
+    <?php 
+        include '/apache/htdocs/Proyecto2/includes/db/db.php';
+        $db = conectDB();
+    ?>
+
     <h1>Every cool species</h1>
     <div class="container-species">
         
-        <a href="specie.html" class="link-container">
+        <a href="specie.php" class="link-container">
         <div class="specie">
             <picture class="pic">
                 <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
@@ -56,7 +60,7 @@
         </div>
         </a>
     
-        <a href="specie.html" class="link-container">
+        <a href="specie.php" class="link-container">
             <div class="specie">
                 <picture class="pic">
                     <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
@@ -79,7 +83,7 @@
             </div>
         </a>
 
-        <a href="specie.html" class="link-container">
+        <a href="specie.php" class="link-container">
             <div class="specie">
                 <picture class="pic">
                     <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
@@ -102,7 +106,7 @@
             </div>
         </a>
 
-        <a href="specie.html" class="link-container">
+        <a href="specie.php" class="link-container">
             <div class="specie">
                 <picture class="pic">
                     <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
@@ -125,7 +129,7 @@
             </div>
         </a>
     
-        <a href="specie.html" class="link-container">
+        <a href="specie.php" class="link-container">
             <div class="specie">
                 <picture class="pic">
                     <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
@@ -148,7 +152,7 @@
             </div>
         </a>
 
-        <a href="specie.html" class="link-container">
+        <a href="specie.php" class="link-container">
             <div class="specie">
                 <picture class="pic">
                     <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
@@ -179,10 +183,9 @@
 
 <footer class="footer">
     <nav class="naveg">
-        <a href="nosotros.html">Nosotros</a>
-        <a href="species.html">Species</a>
-        <a href="blog.html">Blog</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="species.php">Species</a>
+        <a href="blog.php">Blog</a>
+        <a href="contact.html">Contact</a>
     </nav>
     </div>
 </footer>

@@ -223,3 +223,74 @@ font-weight: 350;
 .naveg-bg {
     height: 100%;    
 }
+
+
+@media(max-width: 768px) {
+    
+    .header .contenedor {
+        height: fit-content;
+    }
+    .naveg {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+        font-size: 1rem;
+    }
+
+    .barra {
+        align-items: center;  
+
+    }
+
+    .footer {
+        height: 20rem;
+        padding: 2rem;
+    }
+
+    .titulo {
+        font-size: 3.5rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-species {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .blog-quote {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        align-items: left;
+        justify-content: center;
+    }
+
+    .blog-entry {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        justify-content: center;
+        width: 25em;
+        width: 90%;
+    }
+
+    .blog {
+        justify-content: right;
+        align-items: center;
+        margin: 0 0;
+        max-width: 100%;
+    }
+
+    .entries-container {
+        width: 100%;
+    }
+
+}
+

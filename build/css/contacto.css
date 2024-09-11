@@ -165,3 +165,42 @@ p {
     height: 100%;
     object-fit: cover;
 }
+
+
+@media(max-width: 768px) {
+    
+    .header .contenedor {
+        height: fit-content;
+    }
+    .naveg {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4rem;
+        font-size: 1rem;
+    }
+
+    .barra {
+        align-items: center;  
+
+    }
+
+    .footer {
+        height: 20rem;
+        padding: 2rem;
+    }
+
+    .titulo {
+        font-size: 3.5rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    .contenedorcontacto {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        text-align: center;
+    }
+
+}
+
