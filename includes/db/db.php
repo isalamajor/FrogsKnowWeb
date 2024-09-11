@@ -22,10 +22,38 @@
             return $species;
         } else {
             return [];
-        }
+        }    
+    }
+
+    function obtainInfoSpecie($db, $name) : array {
+        $name = $db->real_escape_string($name);
+        $sql = "SELECT * FROM species WHERE name = ?";
         
-        // Cerrar la conexión
-        $conn->close();
-    
+        // Preparar la consulta
+        if ($stmt = $db->prepare($sql)) {
+        
+            // Vincular el parámetro
+        $stmt->bind_param('s', $name); // 's' de string
+
+        // Ejecutar la consulta
+        $stmt->execute();
+
+        // Obtener el resultado
+        $result = $stmt->get_result();
+
+        // Imprimir resultado para depuración
+        if ($result) {
+            if ($result->num_rows > 0) {
+                $info = $result->fetch_assoc();
+                return $info;
+            } else {
+                echo 'No se encontró la especie :(';
+                return [];
+            }
+        } else {
+            echo 'Error en la consulta: ' . $stmt->error;
+            return [];
+        }
+    }
     }
 ?>

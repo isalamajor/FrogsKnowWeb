@@ -26,7 +26,7 @@
             </div> <!--Barra-->
 
             <h1 class="titulo">Some interesting species</h1>
-        </div>
+        </section>
     </header>
 
     <?php 
@@ -37,143 +37,39 @@
     <h1>Every cool species</h1>
     <div class="container-species">
         
-        <a href="specie.php" class="link-container">
-        <div class="specie">
-            <picture class="pic">
-                <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
-                <source srcset="build/img/green_frog.jpg" type="image/jpg">
-                <img loading="lazy" src="build/img/green_frog.jpg" alt="specie">
-            </picture>
-            <h3>Specie 1</h3>
-            <p>Short description</p>
-            <div class="location">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                    <path d="M3.6 9h16.8" />
-                    <path d="M3.6 15h16.8" />
-                    <path d="M11.5 3a17 17 0 0 0 0 18" />
-                    <path d="M12.5 3a17 17 0 0 1 0 18" />
-                </svg>
-                Africa
-            </div>
-        </div>
-        </a>
-    
-        <a href="specie.php" class="link-container">
-            <div class="specie">
-                <picture class="pic">
-                    <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
-                    <source srcset="build/img/blue_frog.jpg" type="image/jpg">
-                    <img loading="lazy" src="build/img/blue_frog.jpg" alt="specie">
-                </picture>
-                <h3>Specie 2</h3>
-                <p>Short description 2</p>
-                <div class="location">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                        <path d="M3.6 9h16.8" />
-                        <path d="M3.6 15h16.8" />
-                        <path d="M11.5 3a17 17 0 0 0 0 18" />
-                        <path d="M12.5 3a17 17 0 0 1 0 18" />
-                    </svg>
-                    Europe
-                </div>
-            </div>
-        </a>
-
-        <a href="specie.php" class="link-container">
-            <div class="specie">
-                <picture class="pic">
-                    <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
-                    <source srcset="build/img/fat_frog.jpg" type="image/jpg">
-                    <img loading="lazy" src="build/img/fat_frog.jpg" alt="specie">
-                </picture>
-                <h3>Specie 3</h3>
-                <p>Short description 3</p>
-                <div class="location">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                        <path d="M3.6 9h16.8" />
-                        <path d="M3.6 15h16.8" />
-                        <path d="M11.5 3a17 17 0 0 0 0 18" />
-                        <path d="M12.5 3a17 17 0 0 1 0 18" />
-                    </svg>
-                    Europe
-                </div>
-            </div>
-        </a>
-
-        <a href="specie.php" class="link-container">
-            <div class="specie">
-                <picture class="pic">
-                    <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
-                    <source srcset="build/img/frog2.jpg" type="image/jpg">
-                    <img loading="lazy" src="build/img/frog2.jpg" alt="specie">
-                </picture>
-                <h3>Specie 1</h3>
-                <p>Short description</p>
-                <div class="location">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                        <path d="M3.6 9h16.8" />
-                        <path d="M3.6 15h16.8" />
-                        <path d="M11.5 3a17 17 0 0 0 0 18" />
-                        <path d="M12.5 3a17 17 0 0 1 0 18" />
-                    </svg>
-                    Africa
-                </div>
-            </div>
-        </a>
-    
-        <a href="specie.php" class="link-container">
-            <div class="specie">
-                <picture class="pic">
-                    <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
-                    <source srcset="build/img/frog3.jpg" type="image/jpg">
-                    <img loading="lazy" src="build/img/frog3.jpg" alt="specie">
-                </picture>
-                <h3>Specie 2</h3>
-                <p>Short description 2</p>
-                <div class="location">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                        <path d="M3.6 9h16.8" />
-                        <path d="M3.6 15h16.8" />
-                        <path d="M11.5 3a17 17 0 0 0 0 18" />
-                        <path d="M12.5 3a17 17 0 0 1 0 18" />
-                    </svg>
-                    Europe
-                </div>
-            </div>
-        </a>
-
-        <a href="specie.php" class="link-container">
-            <div class="specie">
-                <picture class="pic">
-                    <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
-                    <source srcset="build/img/frog4.jpg" type="image/jpg">
-                    <img loading="lazy" src="build/img/frog4.jpg" alt="specie">
-                </picture>
-                <h3>Specie 3</h3>
-                <p>Short description 3</p>
-                <div class="location">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                        <path d="M3.6 9h16.8" />
-                        <path d="M3.6 15h16.8" />
-                        <path d="M11.5 3a17 17 0 0 0 0 18" />
-                        <path d="M12.5 3a17 17 0 0 1 0 18" />
-                    </svg>
-                    Europe
-                </div>  
-            </div>
-        </a>
+        <?php 
+            $species = obtainSpecies($db);
+            $db -> close();
+            
+            foreach ($species as $specie) {
+                echo '
+                <a href="specie.php?name='.urlencode($specie['name']).'" class="link-container">
+                    <div class="specie">
+                        <picture class="pic">
+                            <source srcset="build/img/'.$specie['picture'].'.jpg" type="image/jpg">
+                            <img loading="lazy" src="build/img/'.$specie['picture'].'.jpg" alt="'.$specie['name'].'">
+                        </picture>
+                        <h3>'.htmlspecialchars($specie['name']).'</h3>
+                        <p>'.htmlspecialchars($specie['short_description']).'</p>
+                        <div class="location">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                                <path d="M3.6 9h16.8" />
+                                <path d="M3.6 15h16.8" />
+                                <path d="M11.5 3a17 17 0 0 0 0 18" />
+                                <path d="M12.5 3a17 17 0 0 1 0 18" />
+                            </svg>
+                            '.htmlspecialchars($specie['continent']).'
+                        </div>
+                    </div>
+                </a>
+                ';
+            }
+            
+        // Cerrar la conexión
+        $conn->close();
+        ?>       
     
     </div>
 <p>Oh, how beautiful frogs are!
