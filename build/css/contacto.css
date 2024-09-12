@@ -12,6 +12,7 @@
 
 html {
     font-size: 62.5%;
+    
 }
 
 body { 
@@ -21,6 +22,16 @@ body {
     text-align: center;
     
 }
+
+html, body {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
 
 h2 {
     justify-content: center;
@@ -34,6 +45,7 @@ main {
     justify-content: center;
     text-align: center;
     align-items: center;
+    
 }
 .header .contenedor img {
     height: 3rem;
@@ -85,7 +97,7 @@ main {
     color: #fff; 
     text-decoration: none; 
     height: 6rem;
-    margin-top: 6rem;
+    margin-top: auto;
   }
 
 .naveg {
@@ -98,6 +110,26 @@ font-weight: 350;
 
 text-decoration: none;
 color: white
+}
+
+.naveg a {
+    text-decoration: none;
+    color: white;
+    font-size: 150%;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+
+.naveg a:hover {
+    font-weight: 800;
+    transform: scale(1.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.naveg-bg {
+    height: 100%;    
 }
 
 h1 {
@@ -199,6 +231,7 @@ p {
     .footer {
         height: 20rem;
         padding: 2rem;
+        margin-top: auto;
     }
 
     .titulo {
