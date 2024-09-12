@@ -32,32 +32,50 @@
     </header>
 
     <main>
+        <?php
+            include '/apache/htdocs/Proyecto2/includes/db/db.php';
+            // Obtener Título del artículo
+            if (isset($_GET['title'])) {
+                $title = urldecode($_GET['title']);
+                $db = connectDB();
+                $article = obtainInfoArticle($db, $title);
+                $db->close();
+            
+                if (! $article) {
+                    echo 'No se encontró el artículo!';
+                }
 
-        <section class="title-article">
-            <a href="blog.php">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M9 14l-4 -4l4 -4" />
-                    <path d="M5 10h11a4 4 0 1 1 0 8h-1" />
-                </svg>
-            </a>
-            <h1>Title of the article</h1>
-        </section>
+                else {
+                    echo '
+                    <h1>'.htmlspecialchars($article['title']).'</h1>
 
-        <section class="content-article">
-            <div class="text-entry">
-                <h2>Entry subtitle</h2>
-                <p>Written day <span>26/08/2024</span> by <span>author</span></p>
-                <p>Entry text...</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum illo odio deserunt accusantium quibusdam, minima tempore enim voluptate recusandae excepturi ad aperiam voluptatem assumenda voluptatibus ut quaerat doloremque cupiditate perferendis.</p>
-            </div>
+                    <section class="content-article">
+                        <div class="text-entry">
+                            <h2>'.htmlspecialchars($article['subtitle']).'</h2>
+                            <p>Written day <span>'.htmlspecialchars($article['date']).'</span> by <span>'.htmlspecialchars($article['name']).' '.htmlspecialchars($article['lastname']).'</span></p>
+                            <div class="text-content">
+                                <p>'.htmlspecialchars($article['introduction']).'</p>
+                                <p>'.htmlspecialchars($article['content']).'</p>
+                            </div>
+                        </div>
 
-            <picture class="pic">
-                <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
-                <source srcset="build/img/waterfall.jpg" type="image/jpg">
-                <img loading="lazy" src="build/img/waterfall.jpg" alt="specie">
-            </picture>
-        </section>
+                        <div class=pics>
+                            <picture class="pic">
+                                <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
+                                <source srcset="build/img/'.htmlspecialchars($article['picture']).'.jpg" type="image/jpg">
+                                <img loading="lazy" src="build/img/'.htmlspecialchars($article['picture']).'.jpg" alt="specie">
+                            </picture>
+                            <picture class="pic">
+                                <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
+                                <source srcset="build/img/'.htmlspecialchars($article['picture2']).'.jpg" type="image/jpg">
+                                <img loading="lazy" src="build/img/'.htmlspecialchars($article['picture2']).'.jpg" alt="specie">
+                            </picture>
+                        </div>
+                    </section>
+                    ';
+                }
+            }
+        ?>
         
     </main>
     

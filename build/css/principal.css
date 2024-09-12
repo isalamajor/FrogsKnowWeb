@@ -113,6 +113,11 @@ p {
     height: 35rem;
     margin: auto;
     padding: 2rem;
+    box-shadow:  0 0 0 0.2rem var(--verde);
+    text-decoration: none;
+}
+.specie:hover {
+    background-color: #e0e0e0; 
 }
 
 .contorno {

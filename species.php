@@ -31,7 +31,7 @@
 
     <?php 
         include '/apache/htdocs/Proyecto2/includes/db/db.php';
-        $db = conectDB();
+        $db = connectDB();
     ?>
 
     <h1>Every cool species</h1>
@@ -67,8 +67,6 @@
                 ';
             }
             
-        // Cerrar la conexión
-        $conn->close();
         ?>       
     
     </div>

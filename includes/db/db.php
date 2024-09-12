@@ -1,6 +1,6 @@
 <?php
 
-    function conectDB() : mysqli {
+    function connectDB() : mysqli {
         $db = mysqli_connect('localhost', 'root', 'root', 'frogsknow');
         if (!$db) {
             echo "No se pudo conectar db";
@@ -32,8 +32,8 @@
         // Preparar la consulta
         if ($stmt = $db->prepare($sql)) {
         
-            // Vincular el parámetro
-        $stmt->bind_param('s', $name); // 's' de string
+        // Vincular el parámetro ('s' de string)
+        $stmt->bind_param('s', $name); 
 
         // Ejecutar la consulta
         $stmt->execute();
@@ -46,8 +46,54 @@
             if ($result->num_rows > 0) {
                 $info = $result->fetch_assoc();
                 return $info;
-            } else {
-                echo 'No se encontró la especie :(';
+            } else {;
+                return [];
+            }
+        } else {
+            echo 'Error en la consulta: ' . $stmt->error;
+            return [];
+        }
+    }
+    }
+
+    function obtainArticles($db) : array {
+        $sql = "SELECT title, subtitle, date, name, lastname, introduction, content, picture FROM article JOIN author ON article.author_id = author.id ORDER BY date DESC";
+        $query = mysqli_query($db, $sql);
+
+        // Obtener los resultados
+        if ($query->num_rows > 0) {
+            $articles = [];
+            while ($row = mysqli_fetch_assoc($query)) {
+                $articles[] = $row;
+            }
+            return $articles;
+        } else {
+            return [];
+        }    
+    }
+
+    function obtainInfoArticle($db, $title) : array {
+        $title = $db->real_escape_string($title);
+        $sql = "SELECT * FROM article JOIN author ON article.author_id = author.id WHERE article.title = ?";
+        
+        // Preparar la consulta
+        if ($stmt = $db->prepare($sql)) {
+        
+        // Vincular el parámetro ('s' de string)
+        $stmt->bind_param('s', $title); 
+
+        // Ejecutar la consulta
+        $stmt->execute();
+
+        // Obtener el resultado
+        $result = $stmt->get_result();
+
+        // Imprimir resultado para depuración
+        if ($result) {
+            if ($result->num_rows > 0) {
+                $info = $result->fetch_assoc();
+                return $info;
+            } else {;
                 return [];
             }
         } else {

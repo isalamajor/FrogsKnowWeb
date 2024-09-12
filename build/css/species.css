@@ -85,7 +85,8 @@ p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 5rem 30rem;
+    margin: 5rem 20%;
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -93,7 +94,8 @@ p {
 .specie {
     background-color:rgba(150, 209, 88, 0.443);
     background-color: #e0f0b5;
-    max-width: 30rem;
+    min-width: 30rem;
+    width: 30rem;
     height: 35rem;
     margin: auto;
     padding: 2rem;
@@ -103,7 +105,7 @@ p {
 
 .specie:hover {
     background-color: #e0e0e0; 
-  }
+}
 
 
 .link-container {

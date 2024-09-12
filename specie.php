@@ -38,7 +38,7 @@
         // Obtener Nombre de la especie
         if (isset($_GET['name'])) {
             $name = urldecode($_GET['name']);
-            $db = conectDB();
+            $db = connectDB();
             $specie = obtainInfoSpecie($db, $name);
             $db->close();
         

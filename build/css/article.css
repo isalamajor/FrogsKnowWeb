@@ -93,31 +93,24 @@ p {
 }
 
 .title-article {
-    display: flex;
-    flex-direction: row;
-    column-gap: 5rem;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    height: fit-content;
-
-    svg {
-        margin-right: auto;
-    }
-
-    h1 {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    height: max-content;
 }
 
-
+.text-content {
+    text-align: left;
+}
 
 .pic img {
     padding: 3rem;
-    width: 90%; /* Ajusta la imagen al 100% del contenedor */
+    width: 65rem; /* Ajusta la imagen al 100% del contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.pics {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .info-specie {
@@ -214,7 +207,7 @@ font-weight: 350;
     }
 
    .title-article {
-        box-sizing: border-box;
+        height: max-content;
         margin-top: 3rem;
         min-height: 20rem;
    }
@@ -223,5 +216,18 @@ font-weight: 350;
     margin: 0 auto;
     flex: 1;
    }
+
+   .pic img {
+    padding: 3rem;
+    width: 90%; /* Ajusta la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 }

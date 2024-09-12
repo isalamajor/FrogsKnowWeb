@@ -80,12 +80,24 @@ main {
     }
 }
 
+.footer {
+    background: url('/build/img/fondo_header.svg') no-repeat center center/cover;
+    color: #fff; 
+    text-decoration: none; 
+    height: 6rem;
+    margin-top: 6rem;
+  }
+
 .naveg {
-    display: flex;
-    flex-direction: row;
-    column-gap: 2rem;
-    text-decoration: none;
-    color: white
+display: flex;
+flex-direction: row;
+column-gap: 4rem;
+height: 100%;
+align-items:center;
+font-weight: 350;
+
+text-decoration: none;
+color: white
 }
 
 h1 {

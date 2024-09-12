@@ -30,70 +30,43 @@
             <h1 class="titulo">The pond blog</h1>
         </div>
     </header>
+
+    <?php
+        include '/apache/htdocs/Proyecto2/includes/db/db.php';
+        $db = connectDB();
+    ?>
     
 
     <main class="blog">
         <h1>Articles</h1>
         <div class="entries-container">
-    
-            <article class="blog-entry">
-                <a href="article.php" class="link-container">
-                    <div class="pic">
-                        <picture>
-                            <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
-                            <source srcset="build/img/pond.jpg" type="image/jpg">
-                            <img loading="lazy" src="build/img/pond.jpg" alt="pond">
-                        </picture>
-                    </div>
+            <?php
+            $articles = obtainArticles($db);
+            $db -> close(); 
 
-                    <div class="text-entry">
-                        <a href="article.php"><h4>Entry title</h4></a>
-                        <p>Written day <span>26/08/2024</span> by <span>author</span></p>
-                        <p>Entry subtitle</p>
-                        <p>Entry text...</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum illo odio deserunt accusantium quibusdam, minima tempore enim voluptate recusandae excepturi ad aperiam voluptatem assumenda voluptatibus ut quaerat doloremque cupiditate perferendis.</p>
-                    </div>
-                </a>
-            </article>
+            foreach($articles as $article) {
+                echo '
+                <article class="blog-entry">
+                    <a href="article.php?title='.urlencode($article['title']).'" class="link-container">
+                        <div class="pic">
+                            <picture>
+                                <!--<source srcset="build/img/name.jpg" type="image/jpg">-->
+                                <source srcset="build/img/'.htmlspecialchars($article['picture'] ).'.jpg" type="image/jpg">
+                                <img loading="lazy" src="build/img/'.htmlspecialchars($article['picture'] ).'.jpg" alt="pond">
+                            </picture>
+                        </div>
 
-            <article class="blog-entry">
-                <a href="article.php" class="link-container">
-                    <div class="pic">
-                        <picture>
-                            <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
-                            <source srcset="build/img/waterfall.jpg" type="image/jpg">
-                            <img loading="lazy" src="build/img/waterfall.jpg" alt="pond">
-                        </picture>
-                    </div>
-
-                    <div class="text-entry">
-                        <a href="article.php"><h4>Entry title</h4></a>
-                        <p>Written day <span>26/08/2024</span> by <span>author</span></p>
-                        <p>Entry subtitle</p>
-                        <p>Entry text...</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="blog-entry">
-                <a href="article.php" class="link-container">
-                    <div class="pic">
-                        <picture>
-                            <!--<source srcset="build/img/green_frog.webp" type="image/webp">-->
-                            <source srcset="build/img/gustavo.jpg" type="image/jpg">
-                            <img loading="lazy" src="build/img/gustavo.jpg" alt="pond">
-                        </picture>
-                    </div>
-
-                    <div class="text-entry">
-                        <a href="article.php"><h4>Entry title</h4></a>
-                        <p>Written day <span>26/08/2024</span> by <span>author</span></p>
-                        <p>Entry subtitle</p>
-                        <p>Entry text...</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum illo odio deserunt accusantium quibusdam, minima tempore enim voluptate recusandae excepturi ad aperiam voluptatem assumenda voluptatibus ut quaerat doloremque cupiditate perferendis.</p>
-                    </div>
-                </a>
-            </article>
+                        <div class="text-entry">
+                            <a href="article.php?title='.urlencode($article['title']).'"><h4>'.htmlspecialchars($article['title']).'</h4></a>
+                            <p>Written day <span>'.htmlspecialchars($article['date']).'</span> by <span>'.htmlspecialchars($article['name'] ).' '.htmlspecialchars($article['lastname'] ).'</span></p>
+                            <p>'.htmlspecialchars($article['subtitle']).'</p>
+                            <p>'.htmlspecialchars($article['introduction']).'</p>
+                        </div>
+                    </a>
+                </article>
+                ';
+            }
+           ?>
         </div>
         
     </main>
