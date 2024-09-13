@@ -101,6 +101,7 @@ p {
     padding: 2rem;
     box-shadow:  0 0 0 0.2rem var(--verde);
     text-decoration: none;
+    transition: background-color 0.5s ease;
 }
 
 .specie:hover {

@@ -30,7 +30,7 @@
     </header>
 
     <?php 
-        include '/apache/htdocs/Proyecto2/includes/db/db.php';
+        include '/apache/htdocs/FrogsKnow/includes/db/db.php';
         $db = connectDB();
         $species = obtainSpecies($db);
         $articles = obtainArticles($db);
@@ -81,6 +81,14 @@
         <h1>Species</h1>
         <p class="introduction">There's so many different frog species, go check some!</p>
 
+        <a href="species.php">
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-big-right-line" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7bc62d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-6v-6h6z" />
+                <path d="M3 9v6" />
+            </svg>
+        </a>
+
         <div class="container-species">
         
         <?php 
@@ -111,7 +119,8 @@
                 ';
             }
             
-        ?>       
+        ?>   
+        </div>
     </section>
 
     <div class="blog-quote">
@@ -134,7 +143,7 @@
                             </div>
 
                             <div class="text-entry">
-                                <a href="article.php?title='.urlencode($article['title']).'"><h4>'.htmlspecialchars($article['title']).'</h4></a>
+                                <a class="title-article" href="article.php?title='.urlencode($article['title']).'"><h4>'.htmlspecialchars($article['title']).'</h4></a>
                                 <p>Written day <span>'.htmlspecialchars($article['date']).'</span> by <span>'.htmlspecialchars($article['name'] ).' '.htmlspecialchars($article['lastname'] ).'</span></p>
                                 <p>'.htmlspecialchars($article['subtitle']).'</p>
                             </div>

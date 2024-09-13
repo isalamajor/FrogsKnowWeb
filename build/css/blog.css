@@ -8,6 +8,9 @@
     --rosa:  #f17ce1  ;
     --verde: #7bc62d;
     --verdeclaro: #a7cd7e;
+    --grisoscuro:  #656666;
+    --azulgris:   #b5dcef;
+    --rojo:  #c84311;
 }
 
 html {
@@ -115,6 +118,7 @@ p {
     padding: 2rem;
     text-align: left;
     width: 50%;
+    transition: background-color 0.5s ease;
 
     span {
         color: var(--azuloscuro);
@@ -127,14 +131,25 @@ p {
     }
 }
 
+.blog-entry:hover {
+    background-color: var(--azulgris);
+    .title-article {
+        color: var(--rojo);
+    }
+}
+
 .blog {
     justify-content: center;
 }
 
-
-.quote blockquote {
-    background-color: var(--verdeclaro);
+.intro {
+    color: var(--grisoscuro);
 }
+
+.title-article {
+    font-size: 110%;
+}
+
 
 .footer {
     background: url('/build/img/fondo_header.svg') no-repeat center center/cover;

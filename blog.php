@@ -32,7 +32,7 @@
     </header>
 
     <?php
-        include '/apache/htdocs/Proyecto2/includes/db/db.php';
+        include '/apache/htdocs/FrogsKnow/includes/db/db.php';
         $db = connectDB();
     ?>
     
@@ -57,10 +57,10 @@
                         </div>
 
                         <div class="text-entry">
-                            <a href="article.php?title='.urlencode($article['title']).'"><h4>'.htmlspecialchars($article['title']).'</h4></a>
+                            <a class="title-article" href="article.php?title='.urlencode($article['title']).'"><h4>'.htmlspecialchars($article['title']).'</h4></a>
                             <p>Written day <span>'.htmlspecialchars($article['date']).'</span> by <span>'.htmlspecialchars($article['name'] ).' '.htmlspecialchars($article['lastname'] ).'</span></p>
                             <p>'.htmlspecialchars($article['subtitle']).'</p>
-                            <p>'.htmlspecialchars($article['introduction']).'</p>
+                            <p class=intro>'.htmlspecialchars($article['introduction']).'</p>
                         </div>
                     </a>
                 </article>

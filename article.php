@@ -33,7 +33,7 @@
 
     <main>
         <?php
-            include '/apache/htdocs/Proyecto2/includes/db/db.php';
+            include '/apache/htdocs/FrogsKnow/includes/db/db.php';
             // Obtener Título del artículo
             if (isset($_GET['title'])) {
                 $title = urldecode($_GET['title']);

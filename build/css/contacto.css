@@ -23,15 +23,6 @@ body {
     
 }
 
-html, body {
-    height: 100%;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-}
-
 
 h2 {
     justify-content: center;
@@ -186,6 +177,7 @@ p {
     justify-content: center;
     align-items: center;
     column-gap: 6rem;
+    margin: 17rem auto;
     h2 {
         font-size: 5rem;
         font-weight: 400;
@@ -210,6 +202,11 @@ p {
     object-fit: cover;
 }
 
+.github-link {
+    text-decoration: none;
+    color: var(--negro);
+}
+
 
 @media(max-width: 768px) {
     
@@ -227,6 +224,7 @@ p {
         align-items: center;  
 
     }
+    
 
     .footer {
         height: 20rem;
@@ -245,6 +243,7 @@ p {
         flex-direction: column;
         row-gap: 2rem;
         text-align: center;
+        margin: 2rem auto;
     }
 
 }
