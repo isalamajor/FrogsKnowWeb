@@ -25,7 +25,7 @@
             </nav>
             </div> <!--Barra-->
 
-            <h1 class="titulo">Some interesting species</h1>
+            <h1 class="titulo">Species</h1>
         </section>
     </header>
 
@@ -34,7 +34,7 @@
         $db = connectDB();
     ?>
 
-    <h1>Every cool species</h1>
+    <h1>Some interesting species</h1>
     <div class="container-species">
         
         <?php 
